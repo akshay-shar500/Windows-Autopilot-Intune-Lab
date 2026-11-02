@@ -84,7 +84,7 @@ The goal is to simulate how an enterprise IT team delivers a ready-to-use, manag
 ### 1. Register the device in Windows Autopilot
 The device was imported into **Devices > Enrollment > Windows Autopilot devices** with group tag `AP`. After a sync, the profile status showed **Assigned**.
 
-![Autopilot device imported](screenshots/01-autopilot-device-imported.png)
+![Autopilot device imported](01-autopilot-device-imported.png)
 
 ### 2. Create the dynamic device group
 A dynamic security group named `AUTOPILOT` was created. Its membership rule matches devices carrying the Autopilot group tag, so any newly registered device is targeted automatically.
@@ -117,7 +117,7 @@ The device was started and the user signed in with a work account. The ESP track
 ### 6. Validate Microsoft Entra ID join
 The device object was created automatically in Entra ID: enabled, Windows 11, join type **Microsoft Entra joined**.
 
-![Device joined to Microsoft Entra ID](screenshots/03-entra-id-joined.png)
+![Entra ID Joined](03-entra-id-joined.png)
 
 ### 7. Validate Intune enrollment and compliance
 The device appears in Intune as **Managed by Intune**, **Corporate**, **Compliant**, with a primary user assigned.
