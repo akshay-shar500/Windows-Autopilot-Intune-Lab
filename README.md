@@ -93,26 +93,26 @@ A dynamic security group named `AUTOPILOT` was created. Its membership rule matc
 (device.devicePhysicalIds -any (_ -contains "[OrderID]:AP"))
 ```
 
-![Autopilot dynamic group](screenshots/08-autopilot-dynamic-group.png)
+![Autopilot dynamic group](08-autopilot-dynamic-group.png)
 
-![Dynamic membership rule](screenshots/09-dynamic-membership-rule.png)
+![Dynamic membership rule](09-dynamic-membership-rule.png)
 
 ### 3. Configure the Autopilot deployment profile
 The `AUTOPILOT` profile uses **User-Driven** deployment mode and **Microsoft Entra joined**, and is assigned to the dynamic group.
 
-![Autopilot deployment profile list](screenshots/05-autopilot-deployment-profile-list.png)
+![Autopilot deployment profile list](05-autopilot-deployment-profile-list.png)
 
-![Autopilot deployment profile overview](screenshots/06-autopilot-profile-overview.png)
+![Autopilot deployment profile overview](06-autopilot-profile-overview.png)
 
 ### 4. Assign the Enrollment Status Page policy
 An ESP policy named `AUTOPILOT` was set at priority 1 and assigned, above the default policy, so Autopilot devices show setup progress during provisioning.
 
-![Enrollment Status Page policy](screenshots/07-enrollment-status-page-policy.png)
+![Enrollment Status Page policy](07-enrollment-status-page-policy.png)
 
 ### 5. Run OOBE and observe the Enrollment Status Page
 The device was started and the user signed in with a work account. The ESP tracked **Device preparation**, **Device setup** and **Account setup**.
 
-![Enrollment Status Page during OOBE](screenshots/02-enrollment-status-page.jpg)
+![Enrollment Status Page during OOBE](02-enrollment-status-page.jpg)
 
 ### 6. Validate Microsoft Entra ID join
 The device object was created automatically in Entra ID: enabled, Windows 11, join type **Microsoft Entra joined**.
@@ -122,7 +122,7 @@ The device object was created automatically in Entra ID: enabled, Windows 11, jo
 ### 7. Validate Intune enrollment and compliance
 The device appears in Intune as **Managed by Intune**, **Corporate**, **Compliant**, with a primary user assigned.
 
-![Device enrolled in Intune and compliant](screenshots/04-device-enrolled-compliant.png)
+![Device enrolled in Intune and compliant](04-device-enrolled-compliant.png)
 
 ---
 
@@ -138,7 +138,7 @@ The device appears in Intune as **Managed by Intune**, **Corporate**, **Complian
 | Intune enrollment (Corporate) | Pass |
 | Compliance state | Compliant |
 
-![Intune dashboard](screenshots/11-intune-dashboard.png)
+![Intune dashboard](11-intune-dashboard.png)
 
 > Observation: the Intune dashboard flagged **1 device configuration policy with an error or conflict**. This is noted as a follow-up troubleshooting item.
 
